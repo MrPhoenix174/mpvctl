@@ -8,10 +8,22 @@ import (
 	"os/exec"
 
 	"github.com/MrPhoenix174/mpvctl/config"
+	//"github.com/MrPhoenix174/mpvctl/cmd"
 )
 
+func ShowLinksForPlay(links []config.LinkInfo) {
+	fmt.Println("Saved links:")
+	if len(links) == 0 {
+		fmt.Println("no links")
+		return
+	}
+	for i, link := range links {
+		fmt.Printf("[%d] %s - %s\n", i+1, link.LinkName, link.TypeOfEl)
+	}
+}
+
 func SelectLink(links []config.LinkInfo) (config.LinkInfo, error) {
-	config.ShowLinksForPlay(links)
+	ShowLinksForPlay(links)
 
 	if len(links) == 0 {
 		return config.LinkInfo{}, fmt.Errorf("no links to choose!")

@@ -16,7 +16,7 @@ func main() {
 		input := cmd.GetUserChoice()
 		switch input {
 		case 1:
-			// view all links
+			cmd.ShowAllLinks()
 		case 2:
 			cmd.AddLink()
 		case 3:

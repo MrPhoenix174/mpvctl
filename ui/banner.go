@@ -13,9 +13,9 @@ Hello! What would you like to do?
 [1] View saved list  
 [2] Add a new link  
 [3] Play audio or video 
-[4] Launch Cava  
+[4] Launch Cava  (doesn't work yet)
 [5] Launch EasyEffects  
-[6] Settings  
+[6] Settings  (soon)
 [0] Exit
 
 `

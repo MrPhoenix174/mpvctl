@@ -3,7 +3,7 @@ package config
 import (
 	"encoding/json"
 
-	"fmt"
+	//"fmt"
 	"os"
 	//"github.com/MrPhoenix174/mpvctl/cmd"
 	//"github.com/MrPhoenix174/mpvctl/cmd"
@@ -41,13 +41,6 @@ func SaveLinks(filename string, links []LinkInfo) error {
 	return os.WriteFile(filename, data, 0644)
 }
 
-func ShowLinksForPlay(links []LinkInfo) {
-	fmt.Println("Saved links:")
-	if len(links) == 0 {
-		fmt.Println("no links")
-		return
-	}
-	for i, link := range links {
-		fmt.Printf("[%d] %s - %s\n", i+1, link.LinkName, link.TypeOfEl)
-	}
+func EditSettings() {
+
 }
