@@ -4,24 +4,25 @@ import "fmt"
 
 const HelloBanner = `
 ╔════════════════════════════════════╗
-║           MPV PLAYER CTRL          ║
-║          	by MrPhoenix         	 ║
+║         MPV PLAYER CONTROL         ║
+║           by MrPhoenix             ║
 ╚════════════════════════════════════╝
 
-Привет! Что будем делать?
+Hello! What would you like to do?
 
-[1] Посмотреть список
-[2] Добавить ссылку
-[3] Запустить видео
-[4] Запустить Cava
-[5] Запустить EasyEffects
-[6] Настройки
-[0] Выход
-
-> _
+[1] View saved list  
+[2] Add a new link  
+[3] Play audio  
+[4] Play video  
+[5] Launch Cava  
+[6] Launch EasyEffects  
+[7] Settings  
+[0] Exit
 
 `
+const InputStr = "> "
 
 func ShowMainMenu() {
 	fmt.Print(HelloBanner)
+	//fmt.Print(InputStr)
 }
