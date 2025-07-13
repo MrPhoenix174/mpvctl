@@ -20,15 +20,14 @@ func main() {
 		case 2:
 			cmd.AddLink()
 		case 3:
-			// play music
+			cmd.PlayMusicOrVideo()
 		case 4:
-			// show video
-		case 5:
 			// launch cava
-		case 6:
+		case 5:
 			// launch EasyEffects
-		case 7:
+		case 6:
 			// settings
+
 		case 0:
 			fmt.Println("bye")
 			os.Exit(0)
