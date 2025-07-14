@@ -1,3 +1,4 @@
 .vscode/
-settings.json
-links.json
+*.json
+config/links.json
+config/settings.json
