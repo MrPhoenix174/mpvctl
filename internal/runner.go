@@ -32,7 +32,7 @@ func LaunchEasyEffects() {
 	cmd := exec.Command("easyeffects")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	err := cmd.Run()
+	err := cmd.Start()
 	if err != nil {
 		fmt.Println("easyeffects startup error: ", err)
 		return

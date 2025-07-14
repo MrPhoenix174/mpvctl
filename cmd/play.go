@@ -46,17 +46,44 @@ func PlayMusicOrVideo() {
 		fmt.Println("Error when reading:", err)
 		return
 	}
+	settings, err := config.LoadSettings("config/settings.json")
+	if err != nil {
+		fmt.Println("Error loading settings:", err)
+		return
+	}
 	fmt.Println("Choose what to play")
 
 	selectedLink, err := SelectLink(links)
 	if err != nil {
-		fmt.Println("Error:", err)
+		fmt.Println("Error selecting link:", err)
+		return
+	}
+	selectedID := selectedLink.LinkID
+	startIndex := -1
+	for i, link := range links {
+		if link.LinkID == selectedID {
+			startIndex = i
+			break
+		}
+	}
+	if startIndex == -1 {
+		fmt.Println("Selected link not found in list.")
 		return
 	}
 
 	fmt.Println("You chose::", selectedLink.LinkName)
+	for i := startIndex; i < len(links); i++ {
+		link := links[i]
+		fmt.Printf("Playing %d/%d: %s\n", i+1, len(links), link.LinkName)
 
-	playLink(selectedLink.UserLink, false)
+		playLink(link.UserLink, false)
+
+		if !settings.Autoplay {
+			break
+		}
+	}
+
+	//playLink(selectedLink.UserLink, false)
 
 }
 

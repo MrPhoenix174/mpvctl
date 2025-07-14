@@ -2,6 +2,7 @@ package config
 
 import (
 	"encoding/json"
+	"fmt"
 
 	//"fmt"
 	"os"
@@ -41,6 +42,15 @@ func SaveLinks(filename string, links []LinkInfo) error {
 	return os.WriteFile(filename, data, 0644)
 }
 
-func EditSettings() {
-
+func LoadSettings(path string) (Settings, error) {
+	var settings Settings
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return settings, fmt.Errorf("failed to read settings file: %w", err)
+	}
+	err = json.Unmarshal(data, &settings)
+	if err != nil {
+		return settings, fmt.Errorf("failed to parse settings JSON: %w", err)
+	}
+	return settings, nil
 }

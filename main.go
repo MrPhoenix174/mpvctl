@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/MrPhoenix174/mpvctl/cmd"
+	"github.com/MrPhoenix174/mpvctl/internal"
 	"github.com/MrPhoenix174/mpvctl/ui"
 )
 
@@ -22,11 +23,10 @@ func main() {
 		case 3:
 			cmd.PlayMusicOrVideo()
 		case 4:
-			// launch cava
+			//internal.LaunchCava() /// -now not works (or no?)
 		case 5:
-			// launch EasyEffects
+			internal.LaunchEasyEffects()
 		case 6:
-			// settings
 
 		case 0:
 			fmt.Println("bye")
