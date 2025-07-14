@@ -4,7 +4,7 @@
 
 **mpvctl** is a simple command-line utility that helps you launch and manage audio/video streams using [mpv](https://mpv.io). It offers a basic TUI-like interface, saves stream links, and optionally starts audio effects with [EasyEffects](https://github.com/wwmm/easyeffects) and a visualizer with [Cava](https://github.com/karlstav/cava).
 
-> ⚠️ The interface is still a work in progress. Cava integration doesn't fully work yet but will be improved in future updates.
+> ⚠️ The interface is still a work in progress. Cava integration doesn't fully work yet but will be improved in future updates. And somewhere i'll clean code
 
 ---
 
