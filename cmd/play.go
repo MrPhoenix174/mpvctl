@@ -76,7 +76,12 @@ func PlayMusicOrVideo() {
 		link := links[i]
 		fmt.Printf("Playing %d/%d: %s\n", i+1, len(links), link.LinkName)
 
-		playLink(link.UserLink, false)
+		//playLink(link.UserLink, false)
+		if link.TypeOfEl == "video" {
+			playLink(link.UserLink, true)
+		} else {
+			playLink(link.UserLink, false)
+		}
 
 		if !settings.Autoplay {
 			break
